@@ -1,65 +1,66 @@
-# Qwik City App ⚡️
+[![example-qwik](https://github.com/koyeb/example-qwik/actions/workflows/deploy.yaml/badge.svg)](https://github.com/koyeb/example-qwik/actions)
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+<div align="center">
+  <a href="https://koyeb.com">
+    <img src="https://www.koyeb.com/static/images/icons/koyeb.svg" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Koyeb Serverless Platform</h3>
+  <p align="center">
+    Deploy a Qwik application on Koyeb
+    <br />
+    <a href="https://koyeb.com">Learn more about Koyeb</a>
+    ·
+    <a href="https://koyeb.com/docs">Explore the documentation</a>
+    ·
+    <a href="https://koyeb.com/tutorials">Discover our tutorials</a>
+  </p>
+</div>
 
----
 
-## Project Structure
+## About Koyeb and the Qwik example application
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+Koyeb is a developer-friendly serverless platform to deploy apps globally. No-ops, servers, or infrastructure management.  This repository contains a Qwik application you can deploy on the Koyeb serverless platform for testing.
 
-Inside your project, you'll see the following directory structure:
+This example application is designed to show how a Qwik application can be deployed on Koyeb.  You can follow the associated [deploy guide](https://koyeb.com/docs/deploy/qwik) to learn more about the application and how to extend it.
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+## Getting Started
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+Follow the steps below to deploy and run the Qwik application on your Koyeb account.
 
-- `src/components`: Recommended directory for components.
+### Requirements
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+You need a Koyeb account to successfully deploy and run this application. If you don't already have an account, you can sign-up for free [here](https://app.koyeb.com/auth/signup).
 
-## Add Integrations and deployment
+### Deploy using the Koyeb button
 
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
+The fastest way to deploy the Qwik application is to click the **Deploy to Koyeb** button below.
 
-```shell
-npm run qwik add # or `yarn qwik add`
-```
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=example-qwik&type=git&repository=koyeb/example-qwik&branch=main&ports=3000;http;/)
 
-## Development
+Clicking on this button brings you to the Koyeb App creation page with everything pre-set to launch this application.
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+_To modify this application example, you will need to fork this repository. Checkout the [fork and deploy](#fork-and-deploy-to-koyeb) instructions._
 
-```shell
-npm start # or `yarn start`
-```
+# ## Fork and deploy to Koyeb
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+If you want to customize and enhance this application, you need to fork this repository.
 
-## Preview
+If you used the **Deploy to Koyeb** button, you can simply link your service to your forked repository to be able to push changes.  Alternatively, you can manually create the application as described below.
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+On the [Koyeb Control Panel](//app.koyeb.com/apps), click the **Create App** button to go to the App creation page.
 
-```shell
-npm run preview # or `yarn preview`
-```
+1. Select `GitHub` as the deployment method to use.
+2. In the repositories list, select the repository you just forked.
+3. Specify the branch to deploy, in this case `main`.
+4. Choose the builder for the repository.  This repository can be built using buildpacks or a Dockerfile.
+5. Give your App a name, i.e `qwik-on-koyeb`, and click **Deploy**.
 
-## Production
+You will be taken to the deployment page where you can follow the build of your Qwik application. Once the build is completed, your application will be deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+## Contributing
 
-```shell
-npm run build # or `yarn build`
-```
+If you have any questions, ideas or suggestions regarding this application sample, feel free to open an [issue](https://github.com/koyeb/example-qwik/issues) or fork this repository and open a [pull request](https://github.com/koyeb/example-qwik/pulls).
+
+## Contact
+
+[Koyeb](https://www.koyeb.com) - [@gokoyeb](https://twitter.com/gokoyeb) - [Slack](http://slack.koyeb.com/)
