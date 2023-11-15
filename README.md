@@ -41,7 +41,7 @@ Clicking on this button brings you to the Koyeb App creation page with everythin
 
 _To modify this application example, you will need to fork this repository. Checkout the [fork and deploy](#fork-and-deploy-to-koyeb) instructions._
 
-# ## Fork and deploy to Koyeb
+## Fork and deploy to Koyeb
 
 If you want to customize and enhance this application, you need to fork this repository.
 
